@@ -1,0 +1,12 @@
+<!-- src/app/users/user-list/user-list.component.html -->
+<div *ngIf="users.length">
+    <h2>User List</h2>
+    <ul>
+      <li *ngFor="let user of users">
+        {{ user.name }} ({{ user.username }}) - {{ user.email }}
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="!users.length">
+    Loading users...
+  </div>
